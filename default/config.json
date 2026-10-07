@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "general": {
+    "serverName": "GTACORE"
+  },
+  "server": {
+    "dataPath": "D:/GTACORE/txData/Qbox_C4A4D0.base/"
+  }
+}

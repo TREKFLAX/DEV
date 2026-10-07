@@ -1,0 +1,186 @@
+--[[
+Here you can see all the commands included in the chat, and you can even easily create new commands. You can see this in the documentation guide:
+-> https://jota-dev-documentation.gitbook.io/jota-dev/scripts/chat/add-custom-commands
+]]
+
+Config.DynamicCommands = {
+    {
+        name = 'ooc',
+        label = 'OOC',
+        help = 'OOC global',
+        params = 'message',
+        color = "#8fd692",
+        templateId = 'default',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'me',
+        label = 'ME',
+        help = 'Close Action',
+        params = 'message',
+        color = "#d68f8f",
+        templateId = 'me',
+        headerDisplay = 0,
+        proximityRadius = 15.0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'do',
+        label = 'DO',
+        help = 'Close Description',
+        params = 'message',
+        color = "#d1d68f",
+        templateId = 'do',
+        headerDisplay = 0,
+        proximityRadius = 15.0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'ayuda',
+        label = 'AYUDA',
+        help = 'Global Help',
+        params = 'message',
+        color = "#d6ba8f",
+        templateId = 'ayuda',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'pid',
+        label = 'ID',
+        help = 'Ask ID',
+        params = 'message',
+        color = "#a88fd6",
+        templateId = 'id',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'twt',
+        label = 'TWEET',
+        help = 'Send tweet',
+        params = 'message',
+        color = "#8fc7d6",
+        templateId = 'twt',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'anontwt',
+        label = 'TWEET ANÓNIMO',
+        help = 'Send anonymous tweet',
+        params = 'message',
+        color = "#8d3440",
+        templateId = 'anontwt',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true
+    },
+    {
+        name = 'rpol',
+        label = 'INTERNAL RADIO POLICE',
+        help = 'Internal Police Radio',
+        params = 'message',
+        color = "#8faed6",
+        templateId = 'rpol',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        jobs = { 'police' }
+    },
+    {
+        name = 'mechanic',
+        label = 'Mechanic',
+        help = 'Notification Mechanic',
+        params = 'mensaje',
+        color = "#d3a62a",
+        templateId = 'mechanic',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        jobs = { 'mechanic' }
+    },
+    {
+        name = 'police',
+        label = 'Command Police',
+        help = 'Notification Police',
+        params = 'mensaje',
+        color = "#4d6cd1",
+        templateId = 'police',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        broadcastAll = true,
+        jobs = { 'police' }
+    },
+    {
+        name = 'ems',
+        label = 'Command Ems',
+        help = 'Notification EMS',
+        params = 'mensaje',
+        color = "#e97d7d",
+        templateId = 'ems',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        broadcastAll = true,
+        jobs = { 'ambulance' }
+    },
+    {
+        name = 'dados',
+        params = {},
+        color = "#e8d68f",
+        templateId = 'default',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        proximityRadius = 20.0
+    },
+    {
+        name = 'msg',
+        label = 'MSG',
+        params = { 'ID', 'Message' },
+        color = "#8fd69e",
+        templateId = 'msg',
+        headerDisplay = 1,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        privateMessage = true
+    },
+    {
+        name = 'example',
+        label = 'EXAMPLE',
+        help = 'Example command with locales',
+        params = 'mensaje',
+        color = "#9b8fd6",
+        templateId = 'example',
+        headerDisplay = 0,
+        adminOnly = false,
+        allowHTML = false,
+        blockProfanity = true,
+        broadcastAll = false,
+        jobs = nil,
+        proximityRadius = nil,
+        privateMessage = false
+    }
+}

@@ -1,0 +1,65 @@
+{
+  "invalid_model": "Invalid model",
+  "action_deny": "You may not perform this action",
+  "keybinds": {
+    "select": "Selects the currently highlighted gizmo",
+    "mode_translate": "Sets mode of the gizmo to translation",
+    "mode_rotate": "Sets mode for the gizmo to rotation",
+    "space_toggle": "Gizmo space (local/global) toggle",
+    "snap": "Snap current gizmo object to floor/surface",
+    "throw": "Randomly throw the gizmo object",
+    "delete": "Delete selected object"
+  },
+  "ui": {
+    "none": "None",
+    "custom": "Custom",
+    "custom_title": "Spawn a custom prop",
+    "enter_model_name": "Enter model name",
+    "spawn": "Spawn",
+    "cancel": "Cancel",
+    "everything": "Everything",
+    "search_placeholder": "Search items...",
+    "nearby": "Nearby objects",
+    "no_nearby": "No nearby objects",
+    "keybinds": {
+      "select": "Select entity",
+      "rmb": "RMB",
+      "translate": "Translate",
+      "rotate": "Rotate",
+      "put_on_ground": "Put on ground",
+      "apply_physics": "Apply physics",
+      "gizmo_space": "Local/Global Gizmo",
+      "delete": "Delete",
+      "duplicate": "Duplicate",
+      "move": "Move"
+    },
+    "options": {
+      "title": "Selected object",
+      "no_selection": "No object selected",
+      "position": "Position",
+      "rotation": "Rotation",
+      "other": "Other",
+      "advanced": "Advanced options",
+      "scale": "Scale",
+      "scale_hint": "Visual size only. The object's collision does NOT scale. Use with care",
+      "opacity": "Opacity",
+      "opacity_hint": "GTA only supports opacity in 20% steps. It can not be smoother",
+      "disable_collision": "Disable collision",
+      "enable_physics": "Enable physics",
+      "physics_hint": "Meant for doors so they can swing. Avoid using on normal props. physics props are not synchronised",
+      "bucket": "Routing bucket",
+      "bucket_hint": "0 = visible to everyone. Any other value only spawns the prop for players in that routing bucket",
+      "bucket_learn_more": "What are routing buckets?",
+      "done": "Done",
+      "render_dist": "Render distance",
+      "texture_var": "Texture variation",
+      "render_options": {
+        "40": "Very short (40)",
+        "100": "Short (100)",
+        "200": "Medium (200)",
+        "300": "High (300)",
+        "600": "Very high (600)"
+      }
+    }
+  }
+}

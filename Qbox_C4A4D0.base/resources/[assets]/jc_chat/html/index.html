@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="vendor/latofonts.css" rel="stylesheet">
+  <link href="vendor/flexboxgrid.6.3.1.min.css" rel="stylesheet"></link>
+  <link href="vendor/animate.3.5.2.min.css" rel="stylesheet"></link>
+  <link href="./css/style.css" rel="stylesheet"></link>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato|Muli|Open+Sans|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="vendor/vue.2.3.3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  window.CONFIG = {
+    templates: {},
+    style: { background: 'rgba(0,0,0,0)', width: '38%', height: '22%' },
+    defaultTemplateId: 'default',
+    defaultAltTemplateId: 'defaultAlt',
+    defaultPositions: { input: { x: 0.8, y: 2 }, messages: { x: 0.8, y: 1.5 } },
+    fadeTimeout: 8000,
+    suggestionLimit: 5,
+    templateLabels: {},
+    templateClasses: {}
+  };
+  </script>
+  <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="app"></div>
+   </div>
+  <script type="text/x-template" id="app_template">
+    <div id="app">
+      <div class="chat-window" :style="this.style" :class="{ 'bounceOutUp animated': !showWindow, 'hidden': shouldHide }">
+        <div class="chat-messages" ref="messages" v-show="showMessages" :class="{ 'slide-out-left': !showMessages && !showInput, 'slide-in-left': showMessages && showInput }">
+          <message v-for="msg in messages"
+                   :templates="templates"
+                   :multiline="msg.multiline"
+                   :args="msg.args"
+                   :color="msg.color"
+                   :template="msg.template"
+                   :template-id="msg.templateId"
+                   :header-display="msg.headerDisplay != null ? msg.headerDisplay : 0"
+                   :message-label="msg.label"
+                   :key="msg">
+          </message>
+        </div>
+      </div>
+      <div class="chat-input" style="left: 1%; top: 28%;" v-show="showInput">
+        <div class="input-wrapper">
+          <div class="input-container">
+            <textarea v-model="message"
+                      ref="input"
+                      type="text"
+                      :maxlength="limitEnabled ? maxLength : null"
+                      autofocus
+                      spellcheck="false"
+                      @keyup="keyUp"
+                      @keydown="keyDown"
+                      @keypress.enter.prevent="send"
+                      :placeholder="t('input.placeholder')"
+                      style="color: white;">
+            </textarea>
+          </div>
+          <div class="input-buttons">
+            <button class="input-button settings-button" title="Configuración" @click="toggleSettings">
+              <i class="fas fa-cog"></i>
+            </button>
+          </div>
+        </div>
+        <suggestions :message="message" :suggestions="suggestions" @apply-suggestion="applySuggestion">
+        </suggestions>
+      </div>
+      
+      
+      <div class="settings-panel" v-show="showSettings">
+        <div class="settings-header">
+          <h3>{{ t('settings.title') }}</h3>
+        </div>
+
+        
+        <div class="settings-content">
+          <div class="setting-group">
+            <label>{{ t('settings.position') }}</label>
+            <div class="position-controls">
+              <div class="control-row">
+                <label>{{ t('settings.chatX') }}</label>
+                <input type="range" min="0" max="100" :step="1" v-model="inputPosition.x" @input="updateChatPosition">
+                <span>{{formatPct(inputPosition.x)}}%</span>
+              </div>
+              <div class="control-row">
+                <label>{{ t('settings.chatY') }}</label>
+                <input type="range" :min="baselineInputY" max="65" :step="1" v-model="inputPosition.y" @input="updateChatPosition">
+                <span>{{formatPct(inputPosition.y)}}%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="setting-group">
+            <label>{{ t('fontWeight.label') }}</label>
+            <div class="control-row">
+              <select v-model="fontWeight" @change="updateFontWeight">
+                <option value="100">{{ t('fontWeight.thin') }}</option>
+                <option value="200">{{ t('fontWeight.extraLight') }}</option>
+                <option value="300">{{ t('fontWeight.light') }}</option>
+                <option value="400">{{ t('fontWeight.normal') }}</option>
+                <option value="500">{{ t('fontWeight.medium') }}</option>
+                <option value="600">{{ t('fontWeight.semiBold') }}</option>
+                <option value="700">{{ t('fontWeight.bold') }}</option>
+                <option value="800">{{ t('fontWeight.extraBold') }}</option>
+                <option value="900">{{ t('fontWeight.black') }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="settings-actions">
+            <button class="reset-button" @click="resetSettings">
+              <i class="fas fa-undo"></i> {{ t('actions.reset') }}
+            </button>
+            <button class="save-button" @click="saveSettings">
+              <i class="fas fa-save"></i> {{ t('actions.save') }}
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="world-me-do-layer" v-if="meDo3DNUIEnabled" :class="{ hidden: shouldHide }">
+        <div v-for="b in worldMeDoBubbles"
+             :key="'wmd-' + b.id"
+             class="world-me-do-bubble"
+             :class="'world-me-do-bubble--' + (b.kind || 'me')"
+             :style="worldBubblePositionStyle(b)">
+          <div class="world-me-do-inner" :style="worldBubbleAccentStyle(b)">
+            <span class="world-me-do-icon" :style="worldBubbleIconStyle(b)"><i class="fas fa-comment-dots"></i></span>
+            <span class="world-me-do-text"><strong>{{ (b.kind === 'do' ? 'DO' : 'ME') }}:</strong> {{ b.plainText }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-template" id="message_template">
+    <div class="msg" :class="{ multiline }">
+      <div v-if="templateId === 'warning'" class="chat-message-warning">
+        <div class="warning-header">{{ args[0] }}</div>
+        <div class="warning-message" v-html="bodyHtml(args[1])"></div>
+      </div>
+      <div v-else-if="templateId === 'system'" class="chat-message-system">
+        <div class="system-header">SISTEMA</div>
+        <div class="system-message" v-html="bodyHtml(args[0])"></div>
+      </div>
+      <div v-else-if="templateId === 'defaultAlt' && args.length === 1" class="chat-message-single" v-html="bodyHtml(args[0])"></div>
+      <div v-else-if="templateId === 'print'" class="chat-message-console">
+        <div class="console-header">CONSOLE</div>
+        <div class="console-message" v-html="bodyHtml(args[0])"></div>
+      </div>
+      <div v-else :class="classes.wrapper">
+        <div :class="classes.header">
+          <span v-if="classes.label" :class="classes.label" :style="headerStyle">{{ label }}</span>
+          <span v-if="templateId === 'msg' && args[0] != null && args[0] !== ''" :class="classes.author" :style="headerStyle">[{{ args[0] }}]</span>
+          <span v-if="authorDisplay !== null" :class="classes.author" :style="headerStyle">[{{ authorDisplay }}]</span>
+          <span v-if="args[3] && classes.extra" :class="classes.extra" :style="headerStyle">{{ args[3] }}</span>
+        </div>
+        <div :class="classes.body" v-html="messageBody"></div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-template" id="suggestions_template">
+    <div class="suggestions-wrap" v-show="currentSuggestions.length > 0">
+      <ul class="suggestions">
+        <li class="suggestion" v-for="s in currentSuggestions" @click="applySuggestion(s)" style="cursor: pointer;">
+          <p>
+            <span :class="{ 'disabled': s.disabled }">
+              {{s.name}}
+            </span>
+            <span class="param"
+                  v-for="(p, index) in s.params"
+                  :class="{ 'disabled': p.disabled, 'active': p.active }">
+              [{{p.name}}]
+            </span>
+          </p>
+          <small class="help" :class="{ 'help-empty': !hasHelp(s) }">
+            <template v-if="hasHelp(s)">
+              {{s.help}}
+              <template v-for="p in s.params" v-if="!p.disabled && p.help">
+                <br>{{p.help}}
+              </template>
+            </template>
+          </small>
+        </li>
+      </ul>
+    </div>
+  </script>
+ 
+  <script type="text/javascript" src="./script/script.js"></script>
+
+</body>
+</html>

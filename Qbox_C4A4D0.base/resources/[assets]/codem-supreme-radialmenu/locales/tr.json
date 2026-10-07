@@ -1,0 +1,277 @@
+{
+	"settings": {
+		"previewing": "Önizleme",
+		"subtitle": "Ayarlar",
+		"categories": {
+			"general": "Genel",
+			"customization": "Özelleştirme"
+		},
+		"theme": {
+			"title": "Tema",
+			"light": "Açık",
+			"dark": "Koyu",
+			"daytime": "Gündüz",
+			"night": "Gece",
+			"dynamic": "Dinamik"
+		},
+		"backgroundBlur": {
+			"title": "Arka Plan Bulanıklığı",
+			"on": "Açık",
+			"off": "Kapalı"
+		},
+		"soundEffect": {
+			"title": "Ses Efekti",
+			"on": "Açık",
+			"off": "Kapalı"
+		},
+		"radialBehaviour": {
+			"title": "Radial Davranışı",
+			"hold": "Basılı Tut",
+			"press": "Tek Basış"
+		},
+		"coloredMenu": {
+			"title": "Renkli Menü"
+		},
+		"scale": {
+			"title": "Menü Boyutu"
+		},
+		"revertToDefault": "Varsayılana Döndür",
+		"appTitle": "Radial Menü",
+		"current": "Seçili",
+		"done": "Tamam",
+		"presetColors": "Hazır Renkler"
+	},
+	"customization": {
+		"addNewCommand": "Yeni komut ekle",
+		"livePreview": "Canlı Önizleme",
+		"modal": {
+			"addTitle": "Yeni Komut Ekle",
+			"name": "İsim",
+			"namePlaceholder": "Seçeneğinizi adlandırın",
+			"command": "Komut",
+			"commandPlaceholder": "Komutu yazın",
+			"addButton": "Seçenek Ekle",
+			"cancelButton": "İptal",
+			"clickToChangeIcon": "İkonu değiştirmek için tıklayın"
+		},
+		"iconPicker": {
+			"title": "İkon Seç",
+			"searchPlaceholder": "İkon ara...",
+			"noResults": "İkon bulunamadı"
+		},
+		"deleteModal": {
+			"title": "Bu seçeneği silmek istediğinizden emin misiniz?",
+			"cancelButton": "İptal",
+			"deleteButton": "Sil"
+		},
+		"revertModal": {
+			"title": "Seçenekleri varsayılana döndürmek istediğinizden emin misiniz?",
+			"cancelButton": "İptal",
+			"revertButton": "Döndür"
+		}
+	},
+	"menu": {
+		"citizen": "Vatandaş",
+		"general": "Genel",
+		"commands": "Komut",
+		"vehicle": "Araç",
+		"next": "Sonraki",
+		"back": "Geri",
+		"settings": "Ayarlar",
+		"phone": "Telefon",
+		"job": "Meslek",
+		"inventory": "Envanter",
+		"wallet": "Cüzdan",
+		"emotes": "Emote'lar",
+		"clothes": "Kıyafetler"
+	},
+	"details": {
+		"empty": "Detayları görmek için bir seçenek seçin.",
+		"maxOptions": "Maksimum 8 seçenek desteklenir.",
+		"theme": {
+			"title": "Tema",
+			"description": "Radial menünün temasını ayarlar."
+		},
+		"backgroundBlur": {
+			"title": "Arka Plan Bulanıklığı",
+			"description": "Radial menünün arka plan bulanıklığını ayarlar."
+		},
+		"soundEffect": {
+			"title": "Ses Efekti",
+			"description": "Menüde gezinirken ses çalar."
+		},
+		"coloredMenu": {
+			"title": "Renkli Menü",
+			"description": "Menü renklerini beğeninize göre ayarlayın."
+		},
+		"radialBehaviour": {
+			"title": "Radial Davranışı",
+			"holdDescription": "Basılı Tut modunda, menüyü açmak için tuşa basılı tutun.",
+			"pressDescription": "Tek Basış modunda, menüyü açmak için tuşa bir kez basın, kapatmak için ESC'ye basın."
+		},
+		"scale": {
+			"title": "Menü Boyutu",
+			"description": "Radial menünün boyutunu ayarlayın."
+		}
+	},
+	"game": {
+		"common": {
+			"on": "Açık",
+			"off": "Kapalı"
+		},
+		"menu": {
+			"citizen": "Vatandaş",
+			"givecontact": "İletişim Bilgisi Ver",
+			"trunk_actions": "Bagaj İşlemleri",
+			"getintrunk": "Bagaja Gir",
+			"putintrunk": "Oyuncuyu Bagaja Koy",
+			"interactions": "Etkileşimler",
+			"cuff": "Kelepçele",
+			"escort": "Eskort Et",
+			"putinvehicle": "Araca Bindir",
+			"blips_title": "İşaretler",
+			"allblipopen": "Tüm İşaretleri Aç",
+			"allblipclose": "Tüm İşaretleri Kapat",
+			"garage": "Garaj",
+			"general": "Genel",
+			"clothing": "Kıyafet",
+			"radialsettings": "Radial Ayarları",
+			"commands": "Komut",
+			"phone": "Telefon",
+			"inventory": "Envanter",
+			"wallet": "Cüzdan",
+			"emotes": "Emoteler",
+			"police_actions": "Polis İşlemleri",
+			"emergencybutton": "Acil Durum Butonu",
+			"checkstatus": "Durum Kontrol",
+			"handcuff": "Kelepçele",
+			"search_player": "Oyuncuyu Ara",
+			"jail": "Hapse At",
+			"revoke_license": "Ehliyeti İptal Et",
+			"ems_actions": "Sağlık İşlemleri",
+			"revive": "Oyuncuyu Canlandır",
+			"heal": "Yaraları İyileştir",
+			"takestretcher": "Sedye Al",
+			"removestretcher": "Sedyeyi Kaldır",
+			"mechanic_actions": "Tamirci İşlemleri",
+			"towvehicle": "Aracı Çek",
+			"repair": "Aracı Tamir Et",
+			"clean": "Aracı Temizle",
+			"taxi_actions": "Taksi İşlemleri",
+			"togglemeter": "Taksimetreyi Göster/Gizle",
+			"togglemousemeter": "Taksimetreyi Başlat/Durdur",
+			"npc_mission": "NPC Görevi",
+			"tow_actions": "Çekici İşlemleri",
+			"togglenpc": "NPC Aç/Kapat",
+			"hotdog_actions": "Sosisçi İşlemleri",
+			"togglesell": "Satışı Aç/Kapat",
+			"job_actions": "Meslek İşlemleri"
+		},
+		"clothing": {
+			"hair": "Saç",
+			"mask": "Maske",
+			"top": "Üst Giysi",
+			"gloves": "Eldiven",
+			"vest": "Yelek",
+			"bag": "Çanta",
+			"shoes": "Ayakkabı",
+			"pants": "Pantolon",
+			"shirt": "Gömlek",
+			"neck": "Boyun",
+			"hat": "Şapka",
+			"glasses": "Gözlük",
+			"ear": "Kulaklık",
+			"watch": "Saat",
+			"bracelet": "Bileklik"
+		},
+		"vehicle": {
+			"vehicle": "Araç",
+			"doors": "Kapılar",
+			"seats": "Koltuklar",
+			"extras": "Ekstralar",
+			"flip": "Aracı Çevir",
+			"emergency": "Acil Çağrı Yap",
+			"door_fallback": "Kapı %s",
+			"driver": "Sürücü",
+			"seat": "Koltuk %s",
+			"extra": "Ekstra %s (%s)",
+			"door_0": "Sürücü Kapısı",
+			"door_1": "Yolcu Kapısı",
+			"door_2": "Arka Sol Kapı",
+			"door_3": "Arka Sağ Kapı",
+			"door_4": "Kaput",
+			"door_5": "Bagaj"
+		},
+		"blip": {
+			"gasstation": "Benzin İstasyonu",
+			"barbershop": "Berber",
+			"clothingshop": "Kıyafet Mağazası",
+			"market": "Market",
+			"bank": "Banka",
+			"garage": "Garaj"
+		},
+		"keymap": {
+			"open": "Radial Menüyü Aç",
+			"close": "Radial Menüyü Kapat (Basılı Tut Modu)"
+		},
+		"framework": {
+			"notify_title": "Radial Menü",
+			"unemployed": "İşsiz",
+			"no_gang": "Çete Yok"
+		},
+		"progress": {
+			"flipping": "Araç çevriliyor"
+		},
+		"notify": {
+			"no_vehicle": "Yakında araç yok",
+			"not_in_vehicle": "Bir araçta değilsiniz",
+			"seat_occupied": "Koltuk dolu",
+			"too_fast": "Araç çok hızlı gidiyor",
+			"remove_harness": "Önce yarış kemerini çıkarın",
+			"unbuckle_first": "Önce emniyet kemerini çıkarın",
+			"seat_changed": "Koltuk değiştirildi",
+			"must_be_driver": "Sürücü olmalısınız",
+			"extra_not_exist": "Ekstra mevcut değil",
+			"extra_enabled": "Ekstra açıldı",
+			"extra_disabled": "Ekstra kapatıldı",
+			"too_far_vehicle": "Araçtan çok uzaktasınız",
+			"vehicle_flipped": "Araç çevrildi",
+			"flip_cancelled": "Çevirme iptal edildi",
+			"invalid_clothing": "Geçersiz kıyafet bileşeni",
+			"invalid_prop": "Geçersiz aksesuar bileşeni",
+			"item_removed": "%s çıkarıldı",
+			"item_equipped": "%s giyildi",
+			"nothing_to_toggle": "Değiştirilecek %s yok",
+			"too_far_trunk": "Bagajdan çok uzaktasınız",
+			"already_in_trunk": "Zaten bagajdasınız",
+			"no_trunk_space": "Bu aracın bagaj alanı yok",
+			"vehicle_type_blocked": "Bu araç tipi kullanılamaz",
+			"trunk_closed": "Bagaj kapalı",
+			"someone_in_trunk": "Bagajda zaten biri var",
+			"entered_trunk": "Bagaja girdiniz - Çıkmak için E'ye basın",
+			"exited_trunk": "Bagajdan çıktınız",
+			"trunk_must_open": "Bagaj açık olmalı",
+			"trunk_occupied": "Bagaj dolu",
+			"no_player_nearby": "Yakında oyuncu yok",
+			"putting_in_trunk": "Oyuncu bagaja konuluyor...",
+			"vehicle_not_found": "Araç bulunamadı",
+			"kidnapped": "Kaçırıldınız! Kaçmaya çalışmak için E'ye basın",
+			"too_far_target": "Hedef oyuncudan çok uzaktasınız",
+			"object_not_found": "Nesne bulunamadı",
+			"not_near_ambulance": "Ambulansın yanında değilsiniz",
+			"too_far_away": "Çok uzaktasınız",
+			"stretcher_in_use": "Sedye kullanımda"
+		},
+		"prompt": {
+			"get_out_trunk": "[E] Bagajdan Çık",
+			"close_trunk": "[G] Bagajı Kapat",
+			"open_trunk": "[G] Bagajı Aç",
+			"try_escape": "[E] Kaçmayı Dene",
+			"push_stretcher": "[E] Sedyeyi İt | [H] Kilitle",
+			"stop_pushing": "[E] İtmeyi Bırak",
+			"lay_stretcher": "[G] Sedyeye Yat",
+			"get_closer": "İtmek için yaklaşın",
+			"get_off_stretcher": "[G] Sedyeden Kalk"
+		}
+	}
+}

@@ -1,0 +1,277 @@
+{
+	"settings": {
+		"previewing": "Previewing",
+		"subtitle": "Settings",
+		"categories": {
+			"general": "General",
+			"customization": "Customization"
+		},
+		"theme": {
+			"title": "Theme",
+			"light": "Light",
+			"dark": "Dark",
+			"daytime": "Daytime",
+			"night": "Night",
+			"dynamic": "Dynamic"
+		},
+		"backgroundBlur": {
+			"title": "Background Blur",
+			"on": "On",
+			"off": "Off"
+		},
+		"soundEffect": {
+			"title": "Sound Effect",
+			"on": "On",
+			"off": "Off"
+		},
+		"radialBehaviour": {
+			"title": "Radial Behaviour",
+			"hold": "Hold",
+			"press": "Press"
+		},
+		"coloredMenu": {
+			"title": "Colored Menu"
+		},
+		"scale": {
+			"title": "Menu Size"
+		},
+		"revertToDefault": "Revert To Default",
+		"appTitle": "Radial Menu",
+		"current": "Current",
+		"done": "Done",
+		"presetColors": "Preset Colors"
+	},
+	"customization": {
+		"addNewCommand": "Add new command",
+		"livePreview": "Live Preview",
+		"modal": {
+			"addTitle": "Add New Command",
+			"name": "Name",
+			"namePlaceholder": "Name your option",
+			"command": "Command",
+			"commandPlaceholder": "Type the command",
+			"addButton": "Add Option",
+			"cancelButton": "Cancel",
+			"clickToChangeIcon": "Click to change icon"
+		},
+		"iconPicker": {
+			"title": "Select Icon",
+			"searchPlaceholder": "Search icons...",
+			"noResults": "No icons found"
+		},
+		"deleteModal": {
+			"title": "Are you sure to delete this option?",
+			"cancelButton": "Cancel",
+			"deleteButton": "Delete"
+		},
+		"revertModal": {
+			"title": "Are you sure to revert options to default?",
+			"cancelButton": "Cancel",
+			"revertButton": "Revert"
+		}
+	},
+	"menu": {
+		"citizen": "Citizen",
+		"general": "General",
+		"commands": "Command",
+		"vehicle": "Vehicle",
+		"next": "Next",
+		"back": "Back",
+		"settings": "Settings",
+		"phone": "Phone",
+		"job": "Job",
+		"inventory": "Inventory",
+		"wallet": "Wallet",
+		"emotes": "Emotes",
+		"clothes": "Clothes"
+	},
+	"details": {
+		"empty": "Select an option to see details.",
+		"maxOptions": "Supports a maximum of 8 options.",
+		"theme": {
+			"title": "Theme",
+			"description": "Adjusts the theme of the radial menu."
+		},
+		"backgroundBlur": {
+			"title": "Background Blur",
+			"description": "Adjusts the background blur of the radial menu."
+		},
+		"soundEffect": {
+			"title": "Sound Effect",
+			"description": "Plays a sound when navigating the menu."
+		},
+		"coloredMenu": {
+			"title": "Colored Menu",
+			"description": "Adjust menu colors to your liking."
+		},
+		"radialBehaviour": {
+			"title": "Radial Behaviour",
+			"holdDescription": "If set to Hold, press and hold the hotkey to open the menu.",
+			"pressDescription": "If set to Press, tap the hotkey to open it, and press ESC to close."
+		},
+		"scale": {
+			"title": "Menu Size",
+			"description": "Adjust the size of the radial menu."
+		}
+	},
+	"game": {
+		"common": {
+			"on": "On",
+			"off": "Off"
+		},
+		"menu": {
+			"citizen": "Citizen",
+			"givecontact": "Give Contact Details",
+			"trunk_actions": "Trunk Actions",
+			"getintrunk": "Get In Trunk",
+			"putintrunk": "Put Player In Trunk",
+			"interactions": "Interactions",
+			"cuff": "Cuff",
+			"escort": "Escort",
+			"putinvehicle": "Put In Vehicle",
+			"blips_title": "Blips",
+			"allblipopen": "Open All Blips",
+			"allblipclose": "Close All Blips",
+			"garage": "Garage",
+			"general": "General",
+			"clothing": "Clothing",
+			"radialsettings": "Radial Settings",
+			"commands": "Command",
+			"phone": "Phone",
+			"inventory": "Inventory",
+			"wallet": "Wallet",
+			"emotes": "Emotes",
+			"police_actions": "Police Actions",
+			"emergencybutton": "Emergency Button",
+			"checkstatus": "Check Status",
+			"handcuff": "Handcuff",
+			"search_player": "Search Player",
+			"jail": "Jail",
+			"revoke_license": "Revoke License",
+			"ems_actions": "EMS Actions",
+			"revive": "Revive Player",
+			"heal": "Heal Wounds",
+			"takestretcher": "Take Stretcher",
+			"removestretcher": "Remove Stretcher",
+			"mechanic_actions": "Mechanic Actions",
+			"towvehicle": "Tow Vehicle",
+			"repair": "Repair Vehicle",
+			"clean": "Clean Vehicle",
+			"taxi_actions": "Taxi Actions",
+			"togglemeter": "Show/Hide Meter",
+			"togglemousemeter": "Start/Stop Meter",
+			"npc_mission": "NPC Mission",
+			"tow_actions": "Tow Actions",
+			"togglenpc": "Toggle NPC",
+			"hotdog_actions": "Hotdog Actions",
+			"togglesell": "Toggle Sell",
+			"job_actions": "Job Actions"
+		},
+		"clothing": {
+			"hair": "Hair",
+			"mask": "Mask",
+			"top": "Top",
+			"gloves": "Gloves",
+			"vest": "Vest",
+			"bag": "Bag",
+			"shoes": "Shoes",
+			"pants": "Pants",
+			"shirt": "Shirt",
+			"neck": "Neck",
+			"hat": "Hat",
+			"glasses": "Glasses",
+			"ear": "Ear Piece",
+			"watch": "Watch",
+			"bracelet": "Bracelet"
+		},
+		"vehicle": {
+			"vehicle": "Vehicle",
+			"doors": "Doors",
+			"seats": "Seats",
+			"extras": "Extras",
+			"flip": "Flip Vehicle",
+			"emergency": "Call Emergency",
+			"door_fallback": "Door %s",
+			"driver": "Driver",
+			"seat": "Seat %s",
+			"extra": "Extra %s (%s)",
+			"door_0": "Driver's Door",
+			"door_1": "Passenger's Door",
+			"door_2": "Back Left Door",
+			"door_3": "Back Right Door",
+			"door_4": "Hood",
+			"door_5": "Trunk"
+		},
+		"blip": {
+			"gasstation": "Gas Station",
+			"barbershop": "Barber",
+			"clothingshop": "Clothing Shop",
+			"market": "Market",
+			"bank": "Bank",
+			"garage": "Garage"
+		},
+		"keymap": {
+			"open": "Open Radial Menu",
+			"close": "Close Radial Menu (Hold Mode)"
+		},
+		"framework": {
+			"notify_title": "Radial Menu",
+			"unemployed": "Unemployed",
+			"no_gang": "No Gang"
+		},
+		"progress": {
+			"flipping": "Flipping vehicle"
+		},
+		"notify": {
+			"no_vehicle": "No vehicle nearby",
+			"not_in_vehicle": "You are not in a vehicle",
+			"seat_occupied": "Seat is occupied",
+			"too_fast": "Vehicle is moving too fast",
+			"remove_harness": "Remove harness first",
+			"unbuckle_first": "Unbuckle your seatbelt first",
+			"seat_changed": "Seat changed",
+			"must_be_driver": "You must be the driver",
+			"extra_not_exist": "Extra does not exist",
+			"extra_enabled": "Extra enabled",
+			"extra_disabled": "Extra disabled",
+			"too_far_vehicle": "Too far from vehicle",
+			"vehicle_flipped": "Vehicle flipped",
+			"flip_cancelled": "Flipping cancelled",
+			"invalid_clothing": "Invalid clothing component",
+			"invalid_prop": "Invalid prop component",
+			"item_removed": "%s removed",
+			"item_equipped": "%s equipped",
+			"nothing_to_toggle": "No %s to toggle",
+			"too_far_trunk": "Too far from trunk",
+			"already_in_trunk": "Already in trunk",
+			"no_trunk_space": "This vehicle has no trunk space",
+			"vehicle_type_blocked": "This vehicle type cannot be used",
+			"trunk_closed": "Trunk is closed",
+			"someone_in_trunk": "Someone is already in trunk",
+			"entered_trunk": "Entered trunk - Press E to exit",
+			"exited_trunk": "Exited trunk",
+			"trunk_must_open": "Trunk must be open",
+			"trunk_occupied": "Trunk is occupied",
+			"no_player_nearby": "No player nearby",
+			"putting_in_trunk": "Putting player in trunk...",
+			"vehicle_not_found": "Vehicle not found",
+			"kidnapped": "You were kidnapped! Press E to try to escape",
+			"too_far_target": "Too far from target player",
+			"object_not_found": "Object not found",
+			"not_near_ambulance": "Not near ambulance",
+			"too_far_away": "Too far away",
+			"stretcher_in_use": "Stretcher in use"
+		},
+		"prompt": {
+			"get_out_trunk": "[E] Get Out of Trunk",
+			"close_trunk": "[G] Close Trunk",
+			"open_trunk": "[G] Open Trunk",
+			"try_escape": "[E] Try to Escape",
+			"push_stretcher": "[E] Push Stretcher | [H] Lock",
+			"stop_pushing": "[E] Stop Pushing",
+			"lay_stretcher": "[G] Lay on Stretcher",
+			"get_closer": "Get closer to push",
+			"get_off_stretcher": "[G] Get off Stretcher"
+		}
+	}
+}
